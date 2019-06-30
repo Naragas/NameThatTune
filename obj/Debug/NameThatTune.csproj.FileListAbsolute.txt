@@ -15,3 +15,5 @@ D:\GitHub\NameThatTune\obj\Debug\Interop.WMPLib.dll
 D:\GitHub\NameThatTune\obj\Debug\AxInterop.WMPLib.dll
 D:\GitHub\NameThatTune\obj\Debug\NameThatTune.csproj.ResolveComReference.cache
 D:\GitHub\NameThatTune\obj\Debug\NameThatTune.fGame.resources
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.fMessage.resources
+D:\GitHub\NameThatTune\bin\Debug\Resources\error.wav

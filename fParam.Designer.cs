@@ -35,11 +35,15 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.gbGameSettings = new System.Windows.Forms.GroupBox();
-            this.lblGameDuration = new System.Windows.Forms.Label();
-            this.lblMusicDuration = new System.Windows.Forms.Label();
-            this.cbGameDuration = new System.Windows.Forms.ComboBox();
-            this.cbMusicDuration = new System.Windows.Forms.ComboBox();
             this.cbRandomStart = new System.Windows.Forms.CheckBox();
+            this.cbMusicDuration = new System.Windows.Forms.ComboBox();
+            this.cbGameDuration = new System.Windows.Forms.ComboBox();
+            this.lblMusicDuration = new System.Windows.Forms.Label();
+            this.lblGameDuration = new System.Windows.Forms.Label();
+            this.lblPlayer1StopBtn = new System.Windows.Forms.Label();
+            this.lblPlayer2StopBtn = new System.Windows.Forms.Label();
+            this.cbPlayer1Stop = new System.Windows.Forms.ComboBox();
+            this.cbPlayer2Stop = new System.Windows.Forms.ComboBox();
             this.gbGameSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +107,10 @@
             // 
             // gbGameSettings
             // 
+            this.gbGameSettings.Controls.Add(this.cbPlayer2Stop);
+            this.gbGameSettings.Controls.Add(this.cbPlayer1Stop);
+            this.gbGameSettings.Controls.Add(this.lblPlayer2StopBtn);
+            this.gbGameSettings.Controls.Add(this.lblPlayer1StopBtn);
             this.gbGameSettings.Controls.Add(this.cbRandomStart);
             this.gbGameSettings.Controls.Add(this.cbMusicDuration);
             this.gbGameSettings.Controls.Add(this.cbGameDuration);
@@ -115,40 +123,15 @@
             this.gbGameSettings.TabStop = false;
             this.gbGameSettings.Text = "Game Settings";
             // 
-            // lblGameDuration
+            // cbRandomStart
             // 
-            this.lblGameDuration.AutoSize = true;
-            this.lblGameDuration.Location = new System.Drawing.Point(7, 23);
-            this.lblGameDuration.Name = "lblGameDuration";
-            this.lblGameDuration.Size = new System.Drawing.Size(76, 13);
-            this.lblGameDuration.TabIndex = 0;
-            this.lblGameDuration.Text = "Game duration";
-            this.lblGameDuration.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblMusicDuration
-            // 
-            this.lblMusicDuration.AutoSize = true;
-            this.lblMusicDuration.Location = new System.Drawing.Point(7, 50);
-            this.lblMusicDuration.Name = "lblMusicDuration";
-            this.lblMusicDuration.Size = new System.Drawing.Size(76, 13);
-            this.lblMusicDuration.TabIndex = 1;
-            this.lblMusicDuration.Text = "Music duration";
-            // 
-            // cbGameDuration
-            // 
-            this.cbGameDuration.FormattingEnabled = true;
-            this.cbGameDuration.Items.AddRange(new object[] {
-            "15",
-            "30",
-            "45",
-            "60",
-            "90",
-            "120"});
-            this.cbGameDuration.Location = new System.Drawing.Point(90, 20);
-            this.cbGameDuration.Name = "cbGameDuration";
-            this.cbGameDuration.Size = new System.Drawing.Size(48, 21);
-            this.cbGameDuration.TabIndex = 2;
-            this.cbGameDuration.Text = "30";
+            this.cbRandomStart.AutoSize = true;
+            this.cbRandomStart.Location = new System.Drawing.Point(10, 117);
+            this.cbRandomStart.Name = "cbRandomStart";
+            this.cbRandomStart.Size = new System.Drawing.Size(146, 17);
+            this.cbRandomStart.TabIndex = 4;
+            this.cbRandomStart.Text = "Random fragment of tune";
+            this.cbRandomStart.UseVisualStyleBackColor = true;
             // 
             // cbMusicDuration
             // 
@@ -166,15 +149,76 @@
             this.cbMusicDuration.TabIndex = 3;
             this.cbMusicDuration.Text = "10";
             // 
-            // cbRandomStart
+            // cbGameDuration
             // 
-            this.cbRandomStart.AutoSize = true;
-            this.cbRandomStart.Location = new System.Drawing.Point(10, 117);
-            this.cbRandomStart.Name = "cbRandomStart";
-            this.cbRandomStart.Size = new System.Drawing.Size(146, 17);
-            this.cbRandomStart.TabIndex = 4;
-            this.cbRandomStart.Text = "Random fragment of tune";
-            this.cbRandomStart.UseVisualStyleBackColor = true;
+            this.cbGameDuration.FormattingEnabled = true;
+            this.cbGameDuration.Items.AddRange(new object[] {
+            "15",
+            "30",
+            "45",
+            "60",
+            "90",
+            "120"});
+            this.cbGameDuration.Location = new System.Drawing.Point(90, 20);
+            this.cbGameDuration.Name = "cbGameDuration";
+            this.cbGameDuration.Size = new System.Drawing.Size(48, 21);
+            this.cbGameDuration.TabIndex = 2;
+            this.cbGameDuration.Text = "30";
+            // 
+            // lblMusicDuration
+            // 
+            this.lblMusicDuration.AutoSize = true;
+            this.lblMusicDuration.Location = new System.Drawing.Point(7, 50);
+            this.lblMusicDuration.Name = "lblMusicDuration";
+            this.lblMusicDuration.Size = new System.Drawing.Size(76, 13);
+            this.lblMusicDuration.TabIndex = 1;
+            this.lblMusicDuration.Text = "Music duration";
+            // 
+            // lblGameDuration
+            // 
+            this.lblGameDuration.AutoSize = true;
+            this.lblGameDuration.Location = new System.Drawing.Point(7, 23);
+            this.lblGameDuration.Name = "lblGameDuration";
+            this.lblGameDuration.Size = new System.Drawing.Size(76, 13);
+            this.lblGameDuration.TabIndex = 0;
+            this.lblGameDuration.Text = "Game duration";
+            this.lblGameDuration.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblPlayer1StopBtn
+            // 
+            this.lblPlayer1StopBtn.AutoSize = true;
+            this.lblPlayer1StopBtn.Location = new System.Drawing.Point(157, 22);
+            this.lblPlayer1StopBtn.Name = "lblPlayer1StopBtn";
+            this.lblPlayer1StopBtn.Size = new System.Drawing.Size(65, 13);
+            this.lblPlayer1StopBtn.TabIndex = 5;
+            this.lblPlayer1StopBtn.Text = "Player1 stop";
+            // 
+            // lblPlayer2StopBtn
+            // 
+            this.lblPlayer2StopBtn.AutoSize = true;
+            this.lblPlayer2StopBtn.Location = new System.Drawing.Point(157, 50);
+            this.lblPlayer2StopBtn.Name = "lblPlayer2StopBtn";
+            this.lblPlayer2StopBtn.Size = new System.Drawing.Size(65, 13);
+            this.lblPlayer2StopBtn.TabIndex = 6;
+            this.lblPlayer2StopBtn.Text = "Player2 stop";
+            // 
+            // cbPlayer1Stop
+            // 
+            this.cbPlayer1Stop.FormattingEnabled = true;
+            this.cbPlayer1Stop.Location = new System.Drawing.Point(239, 19);
+            this.cbPlayer1Stop.Name = "cbPlayer1Stop";
+            this.cbPlayer1Stop.Size = new System.Drawing.Size(51, 21);
+            this.cbPlayer1Stop.TabIndex = 7;
+            this.cbPlayer1Stop.Text = "A";
+            // 
+            // cbPlayer2Stop
+            // 
+            this.cbPlayer2Stop.FormattingEnabled = true;
+            this.cbPlayer2Stop.Location = new System.Drawing.Point(239, 46);
+            this.cbPlayer2Stop.Name = "cbPlayer2Stop";
+            this.cbPlayer2Stop.Size = new System.Drawing.Size(51, 21);
+            this.cbPlayer2Stop.TabIndex = 8;
+            this.cbPlayer2Stop.Text = "P";
             // 
             // fParam
             // 
@@ -213,5 +257,9 @@
         private System.Windows.Forms.ComboBox cbMusicDuration;
         private System.Windows.Forms.ComboBox cbGameDuration;
         private System.Windows.Forms.CheckBox cbRandomStart;
+        private System.Windows.Forms.ComboBox cbPlayer2Stop;
+        private System.Windows.Forms.ComboBox cbPlayer1Stop;
+        private System.Windows.Forms.Label lblPlayer2StopBtn;
+        private System.Windows.Forms.Label lblPlayer1StopBtn;
     }
 }

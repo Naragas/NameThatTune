@@ -17,6 +17,7 @@ namespace NameThatTune
         static public string lastFolder = string.Empty;
         static public bool allDirectories = false;
         static string regKeyName = "Software\\Naragas\\NameThatTune";
+        static public string answer = string.Empty;
 
         static public void ReadMusic()
         {
