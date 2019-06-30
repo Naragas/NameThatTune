@@ -1,0 +1,17 @@
+D:\GitHub\NameThatTune\bin\Debug\NameThatTune.exe.config
+D:\GitHub\NameThatTune\bin\Debug\NameThatTune.exe
+D:\GitHub\NameThatTune\bin\Debug\NameThatTune.pdb
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.csprojAssemblyReference.cache
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.mainForm.resources
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.Properties.Resources.resources
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.csproj.GenerateResource.cache
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.csproj.CoreCompileInputs.cache
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.exe
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.pdb
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.fParam.resources
+D:\GitHub\NameThatTune\bin\Debug\Interop.WMPLib.dll
+D:\GitHub\NameThatTune\bin\Debug\AxInterop.WMPLib.dll
+D:\GitHub\NameThatTune\obj\Debug\Interop.WMPLib.dll
+D:\GitHub\NameThatTune\obj\Debug\AxInterop.WMPLib.dll
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.csproj.ResolveComReference.cache
+D:\GitHub\NameThatTune\obj\Debug\NameThatTune.fGame.resources
